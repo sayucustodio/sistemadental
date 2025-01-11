@@ -11,28 +11,38 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libzip-dev \
     libicu-dev \
+    libxml2-dev \
+    libssl-dev \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install gd mbstring pdo pdo_mysql mysqli zip intl
-# Instala Composer
+    && docker-php-ext-install gd mbstring pdo pdo_mysql mysqli zip intl xml openssl
+
+# Instalar Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copia los archivos del proyecto al contenedor
+# Establecer una versión específica de Composer (compatible con PHP 7.2)
+RUN composer self-update 1.10.17
+
+# Verificar que Composer se haya instalado correctamente
+RUN composer --version
+
+# Copiar los archivos del proyecto al contenedor
 COPY . /var/www/html
 
-# Establece el directorio de trabajo
+# Establecer el directorio de trabajo
 WORKDIR /var/www/html
 
-# Establece permisos para las carpetas necesarias
-RUN chmod -R 775 /var/www/html/application/cache /var/www/html/application/logs
+# Establecer permisos para las carpetas necesarias
+RUN chmod -R 775 /var/www/html/application/cache /var/www/html/application/logs /var/www/html/vendor
 
-# Instala las dependencias del proyecto
+# Instalar las dependencias del proyecto
 RUN composer install --no-dev --ignore-platform-reqs
 
-# Habilita el módulo rewrite de Apache
+# Habilitar el módulo rewrite de Apache
 RUN a2enmod rewrite
 
-# Expone el puerto 80
+# Exponer el puerto 80
 EXPOSE 80
 
-# Define el comando por defecto
+# Definir el comando por defecto
 CMD ["apache2-foreground"]
+
