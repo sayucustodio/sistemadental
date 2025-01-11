@@ -20,20 +20,20 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-install gd mbstring pdo pdo_mysql mysqli zip intl xml openssl \
     && docker-php-ext-enable gd mbstring pdo pdo_mysql mysqli zip intl xml openssl
 
-# Instalar Composer 2.7.7
+# Instalar Composer versión 2.7.7
 RUN curl -sS https://getcomposer.org/download/2.7.7/composer.phar -o /usr/local/bin/composer \
     && chmod +x /usr/local/bin/composer
 
 # Establecer el directorio de trabajo
 WORKDIR /var/www/html
 
-# Copiar el archivo composer.json y composer.lock
+# Copiar el archivo composer.json y composer.lock al contenedor
 COPY composer.json composer.lock /var/www/html/
 
 # Ejecutar Composer para instalar las dependencias de PHP
 RUN composer install --no-dev
 
-# Copiar el resto del proyecto
+# Copiar el resto del proyecto al contenedor
 COPY . /var/www/html/
 
 # Habilitar mod_rewrite de Apache
