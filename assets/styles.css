@@ -1,0 +1,47 @@
+tfoot {
+    display: table-header-group;
+}
+.dataTables_filter{
+  display: none;
+}
+.datepicker{
+	padding: 6px 12px;
+}
+
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+
+fieldset.scheduler-border {
+  border-color: #428bca !important;
+  border-style: solid;
+  padding: 0 1.4em 1.4em 1.4em !important;
+  margin: 0 0 1.5em 0 !important;
+  -webkit-box-shadow:  0px 0px 0px 0px #000;
+          box-shadow:  0px 0px 0px 0px #000;
+
+}
+
+legend.scheduler-border {
+  font-size: 1.1em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  border-bottom:0;
+  width:auto;
+  padding: 0 5px;
+}
+
+/* sidebar y navbar */
+.skin-blue .main-header .logo{
+  background-color: #338A9E;
+}
+.skin-blue .main-header .logo:hover{
+  background-color: #338A9E;
+}
+.skin-blue .main-header .navbar {
+  background-color: #338A9E;
+}
+.main-header li.user-header{background-color:#338A9E}
+.sidebar-menu>li.active>a{border-left-color:#338A9E}
+.sidebar-menu>li.active{border-left-color:#338A9E}
+.skin-blue.layout-top-nav .main-header>.logo{background-color:#338A9E;color:#fff;border-bottom:0 solid transparent}
