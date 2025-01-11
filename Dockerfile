@@ -1,7 +1,7 @@
 # Usa una imagen base oficial de PHP con Apache
 FROM php:7.2-apache
 
-# Instala las dependencias necesarias para tu proyecto
+# Actualiza y asegura que todas las dependencias estén correctamente instaladas
 RUN apt-get update && apt-get install -y \
     curl \
     git \
@@ -13,30 +13,34 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libxml2-dev \
     libssl-dev \
-    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install gd mbstring pdo pdo_mysql mysqli zip intl xml openssl
+    && apt-get clean
+
+# Instala las extensiones de PHP necesarias
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install gd mbstring pdo pdo_mysql mysqli zip intl xml openssl \
+    && docker-php-ext-enable gd mbstring pdo pdo_mysql mysqli zip intl xml openssl
 
 # Instalar Composer 2.7.7
 RUN curl -sS https://getcomposer.org/download/2.7.7/composer.phar -o /usr/local/bin/composer \
     && chmod +x /usr/local/bin/composer
 
-# Establecer el directorio de trabajo donde se encuentra tu proyecto
+# Establecer el directorio de trabajo
 WORKDIR /var/www/html
 
-# Copiar el archivo composer.json y composer.lock para instalar dependencias
+# Copiar el archivo composer.json y composer.lock
 COPY composer.json composer.lock /var/www/html/
 
-# Instalar las dependencias de PHP de Composer sin los paquetes de desarrollo
+# Ejecutar Composer para instalar las dependencias de PHP
 RUN composer install --no-dev
 
-# Copiar el resto de los archivos del proyecto
+# Copiar el resto del proyecto
 COPY . /var/www/html/
 
-# Habilitar el módulo rewrite de Apache para que funcione bien CodeIgniter
+# Habilitar mod_rewrite de Apache
 RUN a2enmod rewrite
 
-# Exponer el puerto 80 para acceder a tu aplicación
+# Exponer el puerto 80
 EXPOSE 80
 
-# Comando para iniciar Apache en segundo plano
+# Iniciar Apache en primer plano
 CMD ["apache2-foreground"]
