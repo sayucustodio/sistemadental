@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
- $config['base_url'] = 'http://localhost/demo/';
+ $config['base_url'] = 'http://localhost/sistemadental';
 //$config['base_url'] = 'https://bf1c-2800-200-f180-be3-19d-9c08-d332-94a5.ngrok-free.app/demo/';
 $config['index_page'] = '';
 $config['uri_protocol'] = 'REQUEST_URI';
