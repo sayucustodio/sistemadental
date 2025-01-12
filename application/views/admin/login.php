@@ -435,7 +435,7 @@ form.sign-in-form {
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form role="form" action="<?php echo base_url('index.php/auth/login'); ?>" method="post" class="login-form">
+          <form role="form" action="<?php echo base_url('/auth/login'); ?>" method="post" class="login-form">
             <h2 class="title">Iniciar de sesión</h2>
             <div class="login-box-msg">
                                  
