@@ -426,7 +426,8 @@ $('#FormEditarCita select[name=especialidadEditar]').change(function(event) {
 =            AGENDA            =
 ===============================*/
 
-function loadCalendario()
+window.loadCalendario = function() 
+
 {
 	var options = {
 		events_source: base_url+"citas/agenda/calendario",
