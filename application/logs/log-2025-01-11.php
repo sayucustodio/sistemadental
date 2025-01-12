@@ -320,3 +320,118 @@ INFO - 2025-01-11 20:14:04 --> Upload Class Initialized
 INFO - 2025-01-11 20:14:04 --> Session: Class initialized using 'files' driver.
 INFO - 2025-01-11 20:14:04 --> Form Validation Class Initialized
 INFO - 2025-01-11 20:14:04 --> Upload Class Initialized
+INFO - 2025-01-11 20:23:40 --> Config Class Initialized
+INFO - 2025-01-11 20:23:40 --> Hooks Class Initialized
+DEBUG - 2025-01-11 20:23:40 --> UTF-8 Support Enabled
+INFO - 2025-01-11 20:23:40 --> Utf8 Class Initialized
+INFO - 2025-01-11 20:23:40 --> URI Class Initialized
+INFO - 2025-01-11 20:23:40 --> Router Class Initialized
+INFO - 2025-01-11 20:23:40 --> Output Class Initialized
+INFO - 2025-01-11 20:23:40 --> Security Class Initialized
+DEBUG - 2025-01-11 20:23:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-01-11 20:23:40 --> Input Class Initialized
+INFO - 2025-01-11 20:23:40 --> Language Class Initialized
+INFO - 2025-01-11 20:23:40 --> Loader Class Initialized
+INFO - 2025-01-11 20:23:40 --> Helper loaded: form_helper
+INFO - 2025-01-11 20:23:40 --> Helper loaded: url_helper
+INFO - 2025-01-11 20:23:40 --> Helper loaded: directory_helper
+INFO - 2025-01-11 20:23:40 --> Helper loaded: download_helper
+INFO - 2025-01-11 20:23:40 --> Helper loaded: string_helper
+INFO - 2025-01-11 20:23:40 --> Helper loaded: general_helper
+INFO - 2025-01-11 20:23:40 --> Database Driver Class Initialized
+DEBUG - 2025-01-11 20:23:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-01-11 20:23:40 --> Session: Class initialized using 'files' driver.
+INFO - 2025-01-11 20:23:40 --> Form Validation Class Initialized
+INFO - 2025-01-11 20:23:40 --> Upload Class Initialized
+INFO - 2025-01-11 20:23:41 --> Config Class Initialized
+INFO - 2025-01-11 20:23:41 --> Hooks Class Initialized
+INFO - 2025-01-11 20:23:41 --> Config Class Initialized
+INFO - 2025-01-11 20:23:41 --> Hooks Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> UTF-8 Support Enabled
+INFO - 2025-01-11 20:23:41 --> Utf8 Class Initialized
+INFO - 2025-01-11 20:23:41 --> Config Class Initialized
+INFO - 2025-01-11 20:23:41 --> URI Class Initialized
+INFO - 2025-01-11 20:23:41 --> Hooks Class Initialized
+INFO - 2025-01-11 20:23:41 --> Router Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> UTF-8 Support Enabled
+DEBUG - 2025-01-11 20:23:41 --> UTF-8 Support Enabled
+INFO - 2025-01-11 20:23:41 --> Utf8 Class Initialized
+INFO - 2025-01-11 20:23:41 --> Utf8 Class Initialized
+INFO - 2025-01-11 20:23:41 --> Output Class Initialized
+INFO - 2025-01-11 20:23:41 --> URI Class Initialized
+INFO - 2025-01-11 20:23:41 --> URI Class Initialized
+INFO - 2025-01-11 20:23:41 --> Config Class Initialized
+INFO - 2025-01-11 20:23:41 --> Hooks Class Initialized
+INFO - 2025-01-11 20:23:41 --> Security Class Initialized
+INFO - 2025-01-11 20:23:41 --> Router Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-01-11 20:23:41 --> Router Class Initialized
+INFO - 2025-01-11 20:23:41 --> Input Class Initialized
+INFO - 2025-01-11 20:23:41 --> Language Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> UTF-8 Support Enabled
+INFO - 2025-01-11 20:23:41 --> Output Class Initialized
+INFO - 2025-01-11 20:23:41 --> Utf8 Class Initialized
+INFO - 2025-01-11 20:23:41 --> Output Class Initialized
+INFO - 2025-01-11 20:23:41 --> URI Class Initialized
+INFO - 2025-01-11 20:23:41 --> Security Class Initialized
+INFO - 2025-01-11 20:23:41 --> Security Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-01-11 20:23:41 --> Input Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-01-11 20:23:41 --> Router Class Initialized
+INFO - 2025-01-11 20:23:41 --> Loader Class Initialized
+INFO - 2025-01-11 20:23:41 --> Input Class Initialized
+INFO - 2025-01-11 20:23:41 --> Language Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: form_helper
+INFO - 2025-01-11 20:23:41 --> Language Class Initialized
+INFO - 2025-01-11 20:23:41 --> Output Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: url_helper
+INFO - 2025-01-11 20:23:41 --> Security Class Initialized
+INFO - 2025-01-11 20:23:41 --> Loader Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: directory_helper
+INFO - 2025-01-11 20:23:41 --> Loader Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: download_helper
+DEBUG - 2025-01-11 20:23:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: form_helper
+INFO - 2025-01-11 20:23:41 --> Input Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: string_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: form_helper
+INFO - 2025-01-11 20:23:41 --> Language Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: general_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: url_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: url_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: directory_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: directory_helper
+INFO - 2025-01-11 20:23:41 --> Loader Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: download_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: download_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: string_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: string_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: form_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: general_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: general_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: url_helper
+INFO - 2025-01-11 20:23:41 --> Database Driver Class Initialized
+INFO - 2025-01-11 20:23:41 --> Helper loaded: directory_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: download_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: string_helper
+INFO - 2025-01-11 20:23:41 --> Helper loaded: general_helper
+INFO - 2025-01-11 20:23:41 --> Database Driver Class Initialized
+INFO - 2025-01-11 20:23:41 --> Database Driver Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-01-11 20:23:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-01-11 20:23:41 --> Form Validation Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-01-11 20:23:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-01-11 20:23:41 --> Upload Class Initialized
+INFO - 2025-01-11 20:23:41 --> Database Driver Class Initialized
+DEBUG - 2025-01-11 20:23:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-01-11 20:23:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-01-11 20:23:41 --> Form Validation Class Initialized
+INFO - 2025-01-11 20:23:41 --> Upload Class Initialized
+INFO - 2025-01-11 20:23:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-01-11 20:23:41 --> Form Validation Class Initialized
+INFO - 2025-01-11 20:23:41 --> Upload Class Initialized
+INFO - 2025-01-11 20:23:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-01-11 20:23:41 --> Form Validation Class Initialized
+INFO - 2025-01-11 20:23:41 --> Upload Class Initialized

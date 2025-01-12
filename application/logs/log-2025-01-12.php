@@ -118,3 +118,52 @@ INFO - 2025-01-12 01:14:04 --> Model Class Initialized
 INFO - 2025-01-12 01:14:04 --> Model Class Initialized
 INFO - 2025-01-12 01:14:05 --> Final output sent to browser
 DEBUG - 2025-01-12 01:14:05 --> Total execution time: 0.6144
+INFO - 2025-01-12 01:23:40 --> Model Class Initialized
+INFO - 2025-01-12 01:23:40 --> Model Class Initialized
+INFO - 2025-01-12 01:23:40 --> Model Class Initialized
+INFO - 2025-01-12 01:23:40 --> Controller Class Initialized
+INFO - 2025-01-12 01:23:40 --> File loaded: C:\laragon\www\sistemadental\application\views\layouts/header.php
+INFO - 2025-01-12 01:23:40 --> File loaded: C:\laragon\www\sistemadental\application\views\layouts/aside.php
+INFO - 2025-01-12 01:23:40 --> File loaded: C:\laragon\www\sistemadental\application\views\home/inicio.php
+INFO - 2025-01-12 01:23:40 --> File loaded: C:\laragon\www\sistemadental\application\views\layouts/footer.php
+INFO - 2025-01-12 01:23:40 --> Final output sent to browser
+DEBUG - 2025-01-12 01:23:40 --> Total execution time: 0.1860
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Controller Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Email Class Initialized
+INFO - 2025-01-12 01:23:41 --> Final output sent to browser
+DEBUG - 2025-01-12 01:23:41 --> Total execution time: 0.2315
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Controller Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Final output sent to browser
+DEBUG - 2025-01-12 01:23:41 --> Total execution time: 0.3314
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Controller Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+ERROR - 2025-01-12 01:23:41 --> Query error: Incorrect DATE value: '-01-01' - Invalid query: SELECT MONTH(fecha_tra) as mes, sum(total_tra) as montos
+FROM `tratamiento`
+WHERE `fecha_tra` >= '-01-01'
+AND `fecha_tra` <= '-12-31'
+AND `estadopago_tra` = '3'
+AND `estado_tra` = '1'
+GROUP BY `mes`
+ORDER BY `mes`
+INFO - 2025-01-12 01:23:41 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Controller Class Initialized
+INFO - 2025-01-12 01:23:41 --> Model Class Initialized
+INFO - 2025-01-12 01:23:41 --> Final output sent to browser
+DEBUG - 2025-01-12 01:23:41 --> Total execution time: 0.5492
