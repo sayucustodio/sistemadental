@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA EXODONCIA QUIRÚRGICA DE TERCEROS MOLARES INCLUÍDOS</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , en pleno uso de mis facultadesm libres y voluntarias DECLARO que que he sido debidamente INFORMADO/A, por 
+            el cirujano abajo firmante, y en consecuencia, le AUTORIZO junto con sus colaboradores, para que me 
+            sea realizado el procedimiento 
+            denominado__________________________________.
+            
+        </p>
+
+        <div class="contenido">
+            <p>
+                La extracción de las muelas del juicio incluidas está indicada en ocasiones para evitar problemas 
+                como: dolor, inflamación, infección, formación de quistes, enfermedad periodontal, caries, maloclusión, 
+                pérdida preatura de otros dientes, pérdida prematura de hueso, etc.
+            </p>
+            <p>Este procedimiento se realiza con el fin de conseguir un indudable beneficio, sin embargo, no está exento 
+                de POSIBLES COMPLICACIONES, algunas de ellas inevitables en casos excepcionales, siendo las 
+                estadísticamente más frecuentes:</p>
+        
+            <ol>
+                <li>
+                    Alergia al anestésico u otro medicamento utilizado, antes, durante o después de la cirugía.
+                </li>
+                <li>
+                    Hematoma e hinchazón de la región. - Hemorragia postoperatoria. - -Infección postoperatoria.
+
+                </li>
+                <li>
+                    Apertura de los puntos de sutura.
+                </li>
+                <li>
+                    Apertura limitada de la boca durante días o semanas
+                </li>
+                <li>
+                    Daño a los dientes o tejidos vecinos
+                </li>
+                <li>Abandono accidental de un pequeño fragmento de raíz, cuya extracción supondría una ampliación 
+                    injustificada de la cirugía.</li>
+                <li>Falta de sensibilidad parcial o total, temporal o permanente del nervio dentario inferior (sensibilidad 
+                    del labio inferior).</li>
+                <li>Falta de sensibilidad parcial o total del nervio lingual, temporal o permanente (de la lengua y del gusto)</li>
+                <li>Sinusitis.</li>
+                <li>Comunicación entre la boca y la nariz o los senos maxilares.</li>
+                <li>Fracturas óseas.</li>
+                <li>Desplazamiento de dientes a estructuras vecinas.</li>
+                <li>Tragado o aspiración de dientes o de alguna de sus partes./li>
+                <li>Rotura de instrumentos. Rotura de la aguja de anestesia.</li>
+                <li>En fumadores, los riesgos de infección o dehiscencia de la herida son mayores</li>
+
+            </ol>
+            <p>La intervención puede 
+                realizarse con ANESTESIA GENERAL O LOCAL con el riesgo inherente asociado a las mismas, que serán 
+                informados por su anestesista; y los fármacos utilizados pueden producir determinadas alteraciones del 
+                nivel de conciencia por lo que no podrá realizar determinadas actividades inmediatamente, tales como 
+                conducir un vehículo. Recibida la anterior información, considero que he comprendido la naturaleza y 
+                propósitos del tratamiento propuesto, así como sus riesgos conocidos y las alternativas terapéuticas. 
+                Además, en conversación personal con mi cirujano he tenido la oportunidad de consultar y resolver mis 
+                posibles dudas, y de obtener cuanta información complementaria he creído necesaria. Por ello, me 
+                considero en condiciones de valorar debidamente tanto los posibles riesgos como la utilidad y 
+                beneficios que puedo obtener.</p>
+            <p>En ocasiones excepcionales, durante la cirugía pueden surgir situaciones imprevistas que 
+                obliguen al cirujano a realizar algún procedimiento adicional o distinto al planificado. En ese caso, 
+                autorizo al cirujano a tomar las decisiones que crea más justificadas y convenientes para mi 
+                salud. Este consentimiento puede ser revocado discrecionalmente por mí, sin necesidad de justificación 
+                alguna, en cualquier momento antes de realizar el procedimiento.</p>
+            <p>Y, para que así conste, firmo el presente original después de leído, por duplicado, cuya copia se 
+                me proporciona.</p>
+
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>Cirujano-Dentista</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

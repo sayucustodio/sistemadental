@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA ENDODONCIA</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , DECLARO:
+        </p>
+
+        <div class="contenido">
+            <p>
+                Que el Cirujano-Dentista <strong>{{medico_nombre}}</strong>, me ha explicado que es conveniente en mi 
+                situación proceder a realizar el tratamiento endodóntico de mi pieza dentaria, para los que me ha 
+                informado debidamente de lo siguiente:
+            </p>
+            <ol>
+                <li>
+                    El propósito principal de la intervención es la eliminación del tejido pulpar inflamado o infectado, del interior del diente para evitar secuelas dolorosas o infecciosas.
+                </li>
+                <li>
+                    El tratamiento que voy a recibir implica la administración de anestesia local, que consiste en 
+proporcionar, mediante una inyección, sustancias que provocan el bloqueo reversible de los nervios de 
+tal manera que se inhibe transitoriamente la sensibilidad con el fin de realizar el tratamiento sin dolor. 
+Me ha explicado también que tendré la sensación de adormecimiento del labio o de la cara que 
+normalmente va a desaparecerán dos o tres horas. 
+Igualmente me ha explicado que la administración de la anestesia puede provocar, en el punto en el que 
+se administre la inyección, ulceración de la mucosa y dolor, y menos frecuentemente, limitaciones en el 
+movimiento de apertura de la boca, que pueden requerir tratamiento ulterior, y que la anestesia puede 
+provocar bajada de tensión que, más infrecuentemente, pueden provocar un síncope o fibrilación 
+ventricular, que deben tratarse posteriormente, e incluso, excepcionalmente, la muerte. También puede 
+provocar la administración de anestesia urticaria, dermatitis, asma, edema angioneurótico, es decir 
+asfixia, que en casos extremos puede requerir tratamiento urgente.
+                </li>
+                <li>
+                    La intervención consiste en la eliminación y el relleno de la cámara pulpar y los tejidos radiculares con 
+un material que selle la cavidad e impida el paso a las bacterias y toxinas infecciosas, conservando el 
+diente o molar.
+                </li>
+                <li>
+            Se me ha informado, que, a pesar de realizar correctamente la técnica, cabe la posibilidad de que la 
+infección o el proceso quístico o granulomatoso no se eliminen totalmente, por lo que puede ser 
+necesario acudir a la cirugía periapical al cabo de algunas semanas, meses o incluso años. Igualmente 
+es posible que no se obtenga el relleno total de los conductos, por lo que también puede ser necesario 
+proceder a una repetición del tratamiento, como en el caso de que el relleno quede corto o largo.
+<p>También me ha advertido que es muy posible que después de la endodoncia el diente cambie de color y 
+    se oscurezca ligeramente.Y me ha indicado que es frecuente que el diente o molar en el que se ha 
+    realizado la endodoncia se debilite y tienda a fracturarse, por lo que puede ser necesario realizar coronas 
+    protésicas e insertar refuerzos interradiculares. </p>
+
+                </li>
+                <li>
+                    Me ha informado de que todo acto quirúrgico que lleva implícitas una serie de complicaciones 
+                    comunes y potencialmente serias que podrían requerir tratamientos complementarios tanto médicos 
+                    como quirúrgicos.
+                </li>
+            </ol>
+            <p>
+                He comprendido lo que se me ha explicado mi cirujano dentista de forma clara, con un lenguaje sencillo, 
+                habiendo resuelto todas las dudas que se me han planteado, y la información complementaria que le he solicitado.
+  
+            </p>
+            <p>Me ha queda claro que en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar 
+                este consentimiento. Estoy satisfecho con la información recibida y comprendido el alcance y riesgos de este tratamiento, y 
+                en por ello, <strong>DOY MI CONSENTIMIENTO</strong>, para que se me practique el tratamiento de endodoncia.</p>
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>El Odontólogo/ Estomatólogo</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

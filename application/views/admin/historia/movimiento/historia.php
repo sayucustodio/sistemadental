@@ -41,6 +41,7 @@
                     $this->load->view('admin/historia/movimiento/cita');
                     $this->load->view('admin/historia/movimiento/histratamiento');
                     $this->load->view('admin/historia/movimiento/diagnostico');
+                    $this->load->view('admin/historia/movimiento/consentimiento');
                   ?>
                 </div>
               </div>
@@ -62,10 +63,11 @@
                   <a href="#" data-id="HistoriaContenidoDiagnostico" class="list-group-item"><i class="fa fa-heart" aria-hidden="true"></i>  Diagnostico</a>
                   <a href="#" data-id="HistoriaContenidoReceta" class="list-group-item"><i class="fa fa-user-md" aria-hidden="true"></i> Recetario</a>
                   <a href="#" data-id="HistoriaContenidoEvolucion" class="list-group-item"><i class="fa fa-user-md" aria-hidden="true"></i> Evolución</a>
-                  <a href="#" data-id="HistoriaContenidoPlacas" class="list-group-item"><i class="fa fa-files-o" data-id="HistoriaContenidoReceta" aria-hidden="true"></i> Exam. Auxiliares</a>
+                  <a href="#" data-id="HistoriaContenidoPlacas" class="list-group-item"><i class="fa fa-files-o" aria-hidden="true"></i> Exam. Auxiliares</a>
                   <a href="#" data-id="HistoriaContenidoTratamientos" class="list-group-item"><i class="fa fa-credit-card" aria-hidden="true"></i> Historial de pagos</a>
             
                   <a href="#" data-id="HistoriaContenidoCita" class="list-group-item"><i class="fa fa-calendar-plus-o"></i> Historial de citas</a>
+                  <a href="#" data-id="HistoriaConsentimientoInformado" class="list-group-item"><i class="fa fa-file"></i> Consentimientos informados</a>
                 </div>
                 
               </div>

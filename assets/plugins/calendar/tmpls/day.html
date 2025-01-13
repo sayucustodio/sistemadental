@@ -74,6 +74,7 @@
 				</table>
 			</div>
 		</div>
+		<script src="/assets/main.js"></script>
 	</div>
 	<script>
 
@@ -133,7 +134,8 @@
             },
             success: function (response) {
                 if (response.success) {
-					$('#TableAgendaCitaPanel').DataTable().ajax.reload();
+					loadCalendario();
+					//$('#TableAgendaCitaPanel').DataTable().ajax.reload();
                     // alert('Estado de la cita actualizado con éxito.');
                 } else {
                     // alert('No se pudo actualizar el estado de la cita.');

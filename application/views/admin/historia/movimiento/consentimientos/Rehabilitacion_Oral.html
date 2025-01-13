@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO EN REHABILITACIÓN ORAL</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , DECLARO:
+        </p>
+
+        <div class="contenido">
+            <p>
+                Que el Cirujano-Dentista <strong>{{medico_nombre}}</strong>, me ha explicado que es conveniente en mi situación proceder a realizar un tratamiento de rehabilitación 
+                oral que puede precisar distintos tipos de técnicas y tratamientos entre ellos:
+            </p>
+            <ol>
+                <li>
+                    <STRONg>Anestesia local</STRONg>. Me ha explicado que el tratamiento que voy a recibir implica la administración de 
+                    anestesia local, que consiste en proporcionar, mediante una inyección, sustancias que provocan un 
+                    bloqueo reversible de los nervios de tal manera que se inhibe transitoriamente la sensibilidad con el fin 
+                    de realizar el tratamiento sin dolor.
+                    <p>Me ha explicado que tendré la sensación de adormecimiento del labio o de la cara, que normalmente 
+                        van a desaparecer en dos o tres horas. 
+                        También me ha explicado que la administración de la anestesia puede provocar, en el punto en el que se 
+                        administre la inyección, ulceración de la mucosa y dolor, y menos frecuentemente, limitaciones en el 
+                        movimiento de apertura de la boca, que pueden requerir tratamiento ulterior, y que la anestesia puede 
+                        provocar baja de la presión arterial que, en casos menos frecuentes, pueden provocar un síncope o 
+                        fibrilación ventricular, que deben tratarse posteriormente, e, incluso, excepcionalmente, la muerte.</p>
+
+                    <p>Comprendo que aunque de mis antecedentes personales no se deducen posibles alergias o 
+                        hipersensibilidad al agente anestésico, la anestesia puede provocar urticarias, dermatitis, asma, edema 
+                        angioneurótico, asfixia y que en casos extremos puede requerir tratamiento urgente.</p>
+                </li>
+                <li>
+                    <strong>Extracciones simples</strong>. La intervención consiste en la aplicación de un fórceps a la corona, practicando 
+la luxación con movimientos de lateralidad, de manera que pueda desprenderse fácilmente del alvéolo 
+donde está insertada.
+ <p>Aunque se me realizarán los medios diagnósticos que se estimen convenientes, comprendo que es 
+    posible que el estado inflamatorio del diente que se me vaya a extraer pueda producir un proceso 
+    infeccioso, que puede requerir tratamiento con antibióticos y/o antiinflamatorios, del mismo modo que 
+    en el curso del procedimiento puede producirse una hemorragia, que exigiría, para cohibirla, la 
+    colocación en el alvéolo de una sustancia o de sutura. También sé que en el curso del procedimiento de 
+    la extracción se pueden producir, aunque no es frecuente, la rotura de la corona, heridas en la mucosa 
+    de la mejilla o en la lengua, inserción de la raíz en el seno maxilar, fractura del maxilar o de la tuberosidad, 
+    que no dependen de la forma o modo de practicarse la intervención, ni de su correcta realización, sino 
+    que son imprevisibles, en cuyo caso el facultativo tomará las medidas precisas u continuará con la 
+    extracción</p>
+                </li>
+                <li>
+                   <strong>Obturaciones o empastes.</strong> El propósito principal de esta intervención es restaurar los tejidos dentarios 
+duros y proteger la pulpa, para conservar el diente o molar y su función, restableciendo al tiempo, siempre 
+que sea posible, la estética adecuada. La intervención consiste en limpiar la cavidad de tejido cariado y 
+reblandecido y rellenarla posteriormente para conseguir un sellado hermético, conservando el diente o 
+molar.
+<p>El Dentista me ha advertido que es frecuente que se produzca una mayor sensibilidad, sobre doto al frío, 
+    que normalmente desaparecerá de modo espontáneo.</p>
+    <p>También me ha recomendado que vuelva a visitarle si advierto signos de movilidad o alteraciones de la 
+        oclusión, pues en ese caso sería preciso ajustar la oclusión, para aliviar el dolor y para impedir la 
+        formación de una enfermedad periodontal y/o trauma.</p>
+    <p>Comprendo que el sellado hermético puede reactivar procesos infecciosos que hagan necesaria la 
+        endodoncia y que, especialmente si la caries es profunda, el diente o molar quedar frágil y podrá ser 
+        necesario llevar a cabo otro tipo de reconstrucción o colocar una funda protésica.</p>
+        <p>También comprendo que es posible que no me encuentre satisfecho con la forma u el color del diente 
+            tras el tratamiento porque las cualidades de los empastes nunca serán idénticos a su aspecto sano.</p>
+                </li>
+                <li>
+                    <strong>Endodoncia. </strong>El propósito principal de esta intervención es la eliminación del tejido pulpar (conocido 
+vulgarmente por el nervio del diente) inflamado o infectado, o de un proceso granulomatoso o quístico. 
+La intervención consiste en la eliminación del tejido enfermo y rellenar la cámara pulpar y los tejidos 
+radiculares con un material que selle la cavidad e impida el paso a las bacterias y toxinas infecciosas, 
+conservando el diente o molar. El Dentista me ha advertido que, a pesar de realizarse correctamente la 
+técnica, cabe la posibilidad de que la infección o el proceso quístico o granulomatoso no se eliminen 
+totalmente, por lo que puede ser necesario acudir a la cirugía del ápice radicular, llamada apicectomía al 
+cabo de algunas semanas, meses o incluso años.
+<p>A pesar de realizarse correctamente la técnica, es posible que no se obtenga el relleno total de los 
+    conductos, por lo que también puede ser necesario proceder a una reendodoncia, como en el caso de 
+    que el relleno quede corto o largo.</p>
+<p>El Dentista me ha advertido que es muy posible que después de la endodoncia el diente cambie de color 
+    u se oscurezca ligeramente</p>
+    <p>También sé que es frecuente que el diente/molar en que se realice la endodoncia se debilite y tienda a 
+        fracturarse, por lo que puede ser necesario realizar coronas protésicas e insertar refuerzos dentro de la 
+        raíz llamados espigos.</p>
+                </li>
+                <li>
+                    <Strong>Prótesis.</Strong> Me ha explicado el Dentista, la necesidad de tallar los pilares de la prótesis, lo que conlleva 
+la posibilidad de aproximación excesiva a la cámara pulpar (nervio) que nos obligaría a realizar una 
+endodoncia y en algunos casos si el muñón quedase frágil, a realizar un espigo colado o de fibra.
+<p>También se me ha explicado la necesidad de mantener una higiene escrupulosa para evitar el desarrollo 
+    de, caries, gingivitis y secundariamente enfermedad periodontal.</p>
+<p>Asimismo, se me informa de la importancia de visitas periódicas (entre 6 meses y un año) para controlar 
+    la situación de la prótesis y su entorno.</p>
+<p>Por otro lado, se me aclaró que existe la posibilidad de fractura de cualquiera de los componentes de la 
+    prótesis, muy relacionada con en el uso que yo haga de la misma.</p>
+<p>El Dentista me ha explicado que todo acto odontológico lleva implícitas una serie de complicaciones 
+    comunes y potencialmente serias que podrían requerir tratamientos complementarios tanto médicos 
+    como quirúrgicos.</p>
+                </li>
+            </ol>
+            <p>
+                He comprendido lo que se me ha explicado de forma clara, con un lenguaje sencillo, habiendo resuelto 
+todas las dudas que se me han planteado, y la información complementaria que le he solicitado.
+            </p>
+            <p>Me queda claro que en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar 
+                este consentimiento.Estoy satisfecho con la información recibida y comprendido el alcance y riesgos de este tratamiento, y en 
+                por ello, <strong>DOY MI CONSENTIMIENDO</strong>, para que se me practique el tratamiento de rehabilitación oral.</p>
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>El Odontólogo / Estomatólogo</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

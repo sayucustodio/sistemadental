@@ -115,7 +115,15 @@ class Modelgeneral extends CI_Model {
 		}
 		return NULL;
 	}
+	function getHistoriaTratamientosPaciente($id){
 
+		$this->db->from('paciente_diagnostico')
+	   ->join('enfermedad','paciente_diagnostico.codi_enf01 = enfermedad.codi_enf')
+	   ->join('enfermedad_tratamiento','paciente_diagnostico.codi_trat01 = enfermedad_tratamiento.codi_trat')
+	   ->where('paciente_diagnostico.pacdiag_estado','1')
+	   ->where('codi_pac',$id)
+	   ->get()->result();
+   }
 	function editRegist($table,$wheres,$data)
 	{
 		$this->db->where($wheres);

@@ -471,7 +471,16 @@ class Historia_model extends CI_Model {
 		return $result;
 	}
 
+function getHistoriaTratamientosPaciente($id){
 
+	$query= $this->db->from('paciente_diagnostico')
+	->join('enfermedad','paciente_diagnostico.codi_enf01 = enfermedad.codi_enf')
+	->join('enfermedad_tratamiento','paciente_diagnostico.codi_trat01 = enfermedad_tratamiento.codi_trat')
+	->where('paciente_diagnostico.pacdiag_estado','1')
+	->where('codi_pac',$id)
+	->get();
+	return $query->result();
+}
 	function getTrataHistoria($data)
 	{
 

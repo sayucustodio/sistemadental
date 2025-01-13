@@ -8,6 +8,7 @@
             <li class="active">registrar</li>
         </ol>
     </section>
+    
 
     <section class="content">
         <div class="row">
@@ -104,7 +105,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <button type="button" class="pull-left btn btn-md btn-success"
-                                                            id="TratamientoAgregarProcedimiento"><i
+                                                            id="TratamientoAgregarProcedimiento" data-param="<?= $p->codi_pac ?>"><i
                                                                 class="fa fa-plus"></i> Agregar</button>
                                                     </div>
                                                 </div>
@@ -204,7 +205,7 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            <?php foreach ($procedimientos as $p): ?>
+                            <!-- <?php foreach ($procedimientos as $p): ?>
                             <tr>
                                 <td><?= $p->id_procedimiento ?></td>
                                 <td><?= $p->nombre ?></td>
@@ -215,7 +216,7 @@
                                         class="addProcedimiento btn btn-ico btn-info"><i
                                             class="fa fa-plus"></i></button></td>
                             </tr>
-                            <?php endforeach ?>
+                            <?php endforeach ?> -->
                         </tbody>
                     </table>
                 </div>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA IMPLANTES DENTALES</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , DECLARO:
+        </p>
+
+        <div class="contenido">
+            <p>
+                Que el Cirujano-Dentista <strong>{{medico_nombre}}</strong>, me ha explicado que el propósito de la 
+                intervención es la reposición de los dientes perdidos mediante la fijación de tornillos o láminas al hueso, 
+                y posteriormente la colocación de un/ospilar/es metálico/s que soportará las futuras piezas dentales 
+                artificiales.
+            </p>
+            <P>He sido informado/a de otras alternativas de tratamiento mediante la utilización de prótesis 
+                convencionales. Para llevar a cabo el procedimiento se aplicará anestesia, de cuyos posibles riesgos 
+                también he sido informado/a. Igualmente se me ha informado de que existen ciertos riesgos potenciales 
+                en toda intervención quirúrgica realizada en la boca, concretamente:</P>
+            <ol>
+                <li>
+                    Alergia al anestésico, antes, durante o después de la cirugía
+                </li>
+                <li>
+                    Molestias, hematomas e inflamación postoperatoria, durante los primeros días.
+                </li>
+                <li>
+                    Sangrado.
+                </li>
+                <li>
+                    Infección postoperatoria que requiera tratamiento posterior
+                </li>
+                <li>
+                    Lesión de raíces de dientes adyacentes.
+                </li>
+                <LI>Lesión nerviosa que provoque hipoestesia o anestesia del labio inferior, superior, mentón, dientes, 
+                    encía y/o de la lengua, que sueles ser transitoria y excepcionalmente permanente.</LI>
+                <li>Comunicación con los senos nasales o con las fosas nasales.</li>
+                <li>Aspiración o deglución de algún instrumento quirúrgico de pequeño tamaño.</li>
+                <li>Desplazamiento del implante a estructuras vecinas.</li>
+                <li>Rotura de instrumentos.</li>
+                </ol>
+            <p>
+                Los implantes han sido utilizados ampliamente en todo el mundo, desde hace más de 25 años y es un 
+                procedimiento considerado seguro por la comunidad internacional, pero se me ha explicado que, aunque 
+                la técnica se realice correctamente, existe un porcentaje de fracasos entre el 8 y el 10 por ciento. He sido 
+                informado de las complicaciones potenciales de este procedimiento quirúrgico, que incluye además de 
+                las anteriores.
+            </p>
+            <ol>
+                <li>Dehiscencia de sutura y exposición del implante.</li>
+                <li>Falta de integración del implante con el hueso que lo rodea, con la consiguiente pérdida precoz o 
+                    tardía del/los implante/s, y la posible planificación de la prótesis planificada.</li>
+                <li>Imposibilidad de colocar un implante en la localización prevista, por las características de hueso 
+                    remanente.</li>
+                <li>En casos excepcionales, con atrofia importante ósea, puede producirse una fractura mandibular, que 
+                    requiera tratamiento posterior.</li>
+                <li>Fractura del implante o de algún componente de la prótesis.</li>
+                <li>Complicaciones inherentes a la prótesis dental, no cumpliendo las expectativas estéticas, dificultad 
+                    para la fonación, etc.</li>
+            </ol>
+            <p>Entiendo que el tratamiento no concluye con la colocación del implante, sino que será preciso visitar 
+                periódicamente al facultativo y seguir escrupulosamente las normas de higiene que me ha explicado.</p>
+                <p>He comprendido lo que se me ha explicado por el facultativo de forma clara, con un lenguaje sencillo, 
+                    habiendo resuelto todas las dudas que se me han planteado, y la información complementaria que le he 
+                    solicitado.</p>
+
+            <p>Me ha queda claro que en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar 
+                este consentimiento. Estoy satisfecho con la información recibida y comprendido el alcance y riesgos de este tratamiento, y 
+                en por ello,<strong> DOY MI CONSENTIMIENDO</strong> , para que se me practique el tratamiento de implantes. </p>
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>El Odontólogo / Estomatólogo</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
