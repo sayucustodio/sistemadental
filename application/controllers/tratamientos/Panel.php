@@ -13,6 +13,7 @@ class Panel extends CI_Controller {
 		$this->permisos = $this->backend_lib->control();
 		$this->load->model('tratamientos_model');
 		$this->load->model('clinica_model');
+		$this->load->model('historia_model');
 		$this->load->library('email');
 	}
 
@@ -146,13 +147,19 @@ class Panel extends CI_Controller {
 	{
 		$data['especialidades'] = $this->modelgeneral->getTable('especialidad');
 		$data['pacientes'] = $this->modelgeneral->getTable('paciente');
-		$data['procedimientos'] = $this->modelgeneral->getTableWhere('procedimiento',['estado'=>'S']);
+		//$data['procedimientos'] = $this->modelgeneral->getTableWhere('procedimiento',['estado'=>'S']);
 		$this->load->view('layouts/header');
 		$this->load->view('layouts/aside');
 		$this->load->view('admin/tratamientos/tratamientos/nuevo',$data);
 		$this->load->view('layouts/footer');
 	}
-
+	public function listarTratamientos()
+	{
+	 // Obtener el parámetro enviado por GET
+	 $parametro = $this->input->get('parametro');
+	 $procedimiento = $this->historia_model->getHistoriaTratamientosPaciente($parametro);// Ajusta según tus necesidades;
+	 echo json_encode($procedimiento);
+	}
 	public function getProcedimiento()
 	{
 		$procedimiento = $this->modelgeneral->getTableWhereRow('procedimiento',['id_procedimiento'=>$this->input->get('id')]);

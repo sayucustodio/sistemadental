@@ -763,9 +763,58 @@ $('#TratamientosImprimirLista').click(function(event) {
 	$(this).attr('href',path+'tratamientos/panel/imprimirListaTratamientos?'+params);
 });
 
-$('#TratamientoAgregarProcedimiento').click(function(event) {
-	$('#ModalTratamientoProcedimientos').modal();
+$('#TratamientoAgregarProcedimiento').on('click', function () {
+    // Obtener el parámetro del atributo data-param
+    const param = $(this).data('param');
+
+    // Petición AJAX con el parámetro
+    $.ajax({
+        url: path + 'tratamientos/panel/listarTratamientos', // Cambia esta URL a la de tu backend
+        type: 'GET',
+        data: { parametro: param }, // Enviar el parámetro en la solicitud
+        dataType: 'json',
+        success: function (data) {
+            // Limpiar la tabla antes de agregar nuevos datos
+            const tableBody = $('#TableTratamientoProcedimientosModal tbody');
+            tableBody.empty();
+
+            // Validar que la respuesta tenga datos
+            if (!data || data.length === 0) {
+                console.warn('No hay procedimientos disponibles.');
+                alert('No se encontraron procedimientos para el parámetro proporcionado.');
+                return;
+            }
+
+            // Insertar los datos en la tabla
+            data.forEach(procedimiento => {
+                const row = `
+                    <tr>
+                        <td>${procedimiento.codi_trat}</td>
+                        <td>${procedimiento.desc_trat}</td>
+                        <td>
+                            <input id="proc-cant-${procedimiento.codi_trat}" type="number" name="cant" class="form-control" value="1">
+                        </td>
+                        <td></td>
+                        <td>
+                            <button data-id="${procedimiento.codi_trat}" class="addProcedimiento btn btn-ico btn-info">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                tableBody.append(row);
+            });
+
+            // Abrir el modal
+            $('#ModalTratamientoProcedimientos').modal('show');
+        },
+        error: function (xhr, status, error) {
+            console.error('Error en la solicitud AJAX:', status, error);
+            alert('Error al cargar los procedimientos. Por favor, inténtelo de nuevo.');
+        }
+    });
 });
+
 
 var TableTratamientoProcedimientosModal = $('#TableTratamientoProcedimientosModal').DataTable({
 	"language": {"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"},
@@ -2345,6 +2394,7 @@ $('#TableHistoriaMovimientoPlacas').on('click', '.anular-placa', function(event)
 	});
 });
 
+//consentimientos informados
 /*=====  End of HISTORIA - MOVIMIENTO  ======*/
 
 

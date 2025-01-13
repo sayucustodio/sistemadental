@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA ORTODONCIA</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , DECLARO:
+        </p>
+
+        <div class="contenido">
+            <p>
+                Que el Cirujano-Dentista <strong>{{medico_nombre}}</strong>, me ha explicado que es conveniente en mi 
+                situación proceder a realizar un tratamiento ortodóntico, con objeto de conseguir una mejor alineación 
+                de los dientes, para de esta manera prevenir problemas posteriores, mejorando a la vez la masticación 
+                y la estética.
+            </p>
+            <P>Para ello se emplean aparatos de ortodoncia que pueden ser removibles o fijos.</P>
+            <p>Se que es posible que los aparatos removibles se pierdan fácilmente si no están en la boca, y que en 
+                este caso el coste de reposición correrá por mi cuenta. 
+                El Dentista me ha explicado que los aparatos pueden producir úlceras o llagas, dolor en los dientes que 
+                están con los aparatos y que es frecuente que con el tiempo se produzca reabsorción de las raíces, de 
+                manera que estas queden más pequeñas, así como la disminución de las encías, que pueden requerir 
+                tratamiento posterior. También me ha explicado el Dentista que el tratamiento puede requerir la 
+                extracción de algún o algunos dientes sanos, incluso puede ser necesario la extracción de las muelas 
+                del juicio.</p>
+            <p>También sé que el tratamiento ortodóntico puede ser largo en el tiempo, meses e incluso años, lo que 
+                no depende de la técnica empleada ni de su correcta realización sino de factores generalmente 
+                biológicos, y de la respuesta de mi organismo, totalmente impredecibles, y que durante todo este tiempo 
+                deberé extremar las medidas de higiene de la boca para evitar caries y enfermedad de las encías.</p>
+            <p>El Dentista me ha explicado que suspenderá el tratamiento si la higiene no es la adecuada porque corre 
+                gran riesgo mi dentición de sufrir lesiones cariosas múltiples u otros padecimientos derivados de la 
+                escasez de higiene oral.</p>
+            <p>Asimismo, me ha informado que tras la conclusión del tratamiento, se pueden producir algunos 
+                movimientos dentarios no deseados y que deberé acudir periódicamente para ser revisado para evitar 
+                recaídas. He comprendido lo explicado de forma clara, con un lenguaje sencillo, habiendo resuelto todas 
+                las dudas que se me han planteado, y la información complementaria que he solicitado.</p>
+           
+            <p>
+                Me queda claro que en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar 
+este consentimiento. Estoy satisfecho con la información recibida y comprendido el alcance y riesgos 
+de este tratamiento, y en por ello, <strong>DOY MI CONSENTIMIENDO</strong>, para que se me practique el tratamiento 
+de ortodoncia.
+            </p>
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>El Odontólogo / Estomatólogo</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

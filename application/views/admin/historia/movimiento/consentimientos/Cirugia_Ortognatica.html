@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA LA CIRUGÍA ORTOGNÁTICA O DE LAS DEFORMIDADES DENTOFACIALES</h1>
+
+    
+        <div class="contenido">
+            <P>La cirugía ortognática se realiza para corregir la posición de los huesos maxilares,
+                con los consiguientes beneficios estéticos y/o funcionales. Se realiza mediante osteotomías (cortes) 
+                en los huesos de la cara y su posterior recolocación en la posición adecuada. Se fijan con osteosíntesis, 
+                que es el empleo de materiales que permanecen indefinidamente en su lugar y que habitualmente no hay que quitar, 
+                o de materiales que se reabsorben con el tiempo. El tratamiento ortodóncico suele ser necesario antes y después de la cirugía.</P>
+                
+            <P>Este procedimiento se realiza con el fin de conseguir un indudable beneficio, sin embargo, no está́exento
+                        de POSIBLES COMPLICACIONES, algunas de ellas inevitables en casos excepcionales siendo la 
+                        estadísticamente más frecuentes: </P>
+        
+          
+            <ol>
+                <li>
+                    Hematoma e inflamación postoperatoria.
+                </li>
+                <li>
+                    Hemorragia intra o postoperatoria, que puede requerir transfusión.
+
+                </li>
+                <li>
+                    Infección postoperatoria, e incluso osteomielitis.
+                </li>
+                <li>
+                    Dolor postoperatorio.
+                </li>
+                <li>
+                    Falta de sensibilidad parcial o total de los labios, mentón, mejilla, nariz, encía, lengua, dientes o paladar. 
+Normalmente es temporal, pero puede ser permanente.
+                </li>
+                <li>Los dientes próximos a la cirugía pueden resultar dañados y requerir tratamiento, e incluso la 
+                    extracción. - Mala unión de los fragmentos óseos.</li>
+                <li>Recidiva (recaída) total o parcial de la deformidad.</li>
+                <li>Sinusitis</li>
+                <li>Comunicación entre la boca y la nariz o los senos maxilares.</li>
+                <li>Deformidad del tabique nasal o de la nariz.</li>
+                <li>No cumplimiento de las expectativas estéticas y/o cambios emocionales reactivos a los cambios 
+                    faciales.</li>
+                <li>Rotura de instrumentos.</li>
+                <li>En fumadores, los riesgos de infección o dehiscencia de las heridas son mayores.</li>
+                <li> Riesgos específicos en su caso ____________________________________.</li>
+                
+
+            </ol>
+            <p>En la mayoría de los casos, esta cirugía se realiza con anestesia general (con los riesgos inherentes a 
+                ella), que serán informados por su anestesista. También puede ser necesario el uso de transfusiones 
+                (pudiendo derivarse reacciones e infecciones específicas).</p>
+                <p>Recibida la anterior información, considero que he comprendido la naturaleza y propósitos del 
+                    tratamiento propuesto, así como sus riesgos conocidos y las alternativas terapéuticas. Además en 
+                    conversación personal con mi cirujano he tenido la oportunidad de consultar y resolver mis posibles 
+                    dudas, y de obtener cuanta información complementaria he creído necesaria. Por ello, me considero en 
+                    condiciones de valorar debidamente tanto los posibles riesgos como la utilidad y beneficios que puedo 
+                    obtener.</p>
+
+        </div>
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong> COMO PACIENTE, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad, en
+            pleno uso de mis facultades, libre y voluntariamente, DECLARO que he sido debidamente INFORMADO/A, por 
+            el cirujano abajo firmante, y en consecuencia, le AUTORIZO junto con sus colaboradores, para que me 
+            sea realizado el procedimiento denominado ____________________________.
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+           
+        </p>
+        <p class="contenido">
+            En ocasiones excepcionales, durante la cirugía pueden surgir situaciones imprevistas que obliguen al 
+            cirujano a realizar algún procedimiento adicional o distinto al planificado. En ese caso, autorizo al 
+            cirujano a tomar las decisiones que crea más justificadas y convenientes para mi salud. Este 
+            consentimiento puede ser revocado discrecionalmente por mí, sin necesidad de justificación alguna, en 
+            cualquier momento antes de realizar el procedimiento. 
+            Observaciones_________________________________________________________ Y, para que así conste, firmo el presente original después de leído, por duplicado, cuya copia se me 
+            proporciona.
+        </p>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>El Odontólogo / Estomatólogo</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

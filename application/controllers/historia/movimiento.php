@@ -138,6 +138,7 @@ curl_close($curl);
 		$data['paises'] = $this->modelgeneral->getTable('paises');
 		$data['diagnosticos'] = $this->modelgeneral->getTableWhere('enfermedad',['esta_enf'=>'S']);
 		$data['procedimientos'] = $this->modelgeneral->getTable('enfermedad_tratamiento');
+		$data['consentimientos'] = $this->modelgeneral->getTableWhere('consentimiento',['estado_cons'=>'1']);
 		$data['diagnostico_paciente'] =$this->modelgeneral->getTableWhere('paciente_diagnostico',['codi_pac'=>$id,'pacdiag_estado'=>'1']);
 	// Realizar el INNER JOIN para diagnostico_2
     /*$data['diagnostico_paciente'] = $this->modelgeneral->getTableWhereRowWithJoin(
@@ -719,7 +720,34 @@ curl_close($curl);
 		}
 		echo json_encode($resp);
 	}
+function generarConsentimiento ($id){
+	require_once(APPPATH . '../vendor/autoload.php');
 
+		$options = new Options();
+		$options->set('defaultFont', 'Arial'); 
+		 $options->set('isRemoteEnabled', true);
+		$dompdf = new Dompdf($options);
+		$idConsentimiento = $this->input->post('consentimientos');
+		$rutaArchivo= $this->modelgeneral->getTableWhereRow('consentimiento',['codi_cons'=>$idConsentimiento]);
+		$data['clinicas'] = $this->clinica_model->getClinica($data);
+		//$data['historia'] = $this->historia_model->getHistoriaImprimir($id);
+		$data['paciente'] = $this->modelgeneral->getTableWhereRow('paciente',['codi_pac'=>$id]);
+		if (!$rutaArchivo) {
+			show_error('El consentimiento no fue encontrado.');
+		}else{
+
+		// $htmlHeader = $this->load->view('admin/historia/imprimir/header',$data,true);
+		$html = $this->load->view('admin/historia/movimiento/consentimientos/' . $rutaArchivo->file_cons, $data, TRUE);
+		// Cargar el contenido HTML en Dompdf
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper('A4'); // Cambiar a 'landscape' si es necesario
+	
+		// Renderizar el PDF
+		$dompdf->render();
+
+		$dompdf->stream('consentimienro.pdf', array('Attachment' => false)); // false para mostrar en el navegador
+	}
+}
 	function imprimirHistoria($id)
 	{
 		

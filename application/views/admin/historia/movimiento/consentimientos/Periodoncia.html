@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA PERIODONCIA</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , DECLARO:
+        </p>
+
+        <div class="contenido">
+            <p>
+                Que el Cirujano-Dentista <strong>{{medico_nombre}}</strong>, me ha explicado que es conveniente, en mi 
+                situación, proceder a realizar un tratamiento periodontal, dándome la siguiente información:
+            </p>
+            <ol>
+                <li>
+                    El propósito principal de la intervención es la eliminación de los factores irritativos e infecciosos 
+                    presentes en los tejidos de soporte de los dientes (encía, hueso alveolar, ligamiento periodontal, cemento 
+                    radicular), para conseguir el mantenimiento de los dientes en el tiempo, función y estética, evitando 
+                    movilidad, pérdida de hueso y caída de los mismos.
+                </li>
+                <li>
+                    Me ha explicado que el tratamiento que voy a recibir implica la administración de anestesia local, 
+                    que consiste en proporcionar, mediante una inyección, sustancias que provocan un bloqueo reversible 
+                    de los nervios de tal manera que se inhibe transitoriamente la sensibilidad con el fin de realizar el 
+                    tratamiento sin dolor.
+                    <P>Me ha explicado que tendré la sensación de adormecimiento del labio o de la cara, que normalmente 
+                        van a desaparecer en dos o tres horas.</P>
+                    <p>También me ha explicado que la administración de la anestesia puede provocar, en el punto en el que se 
+                        administre la inyección, ulceración de la mucosa y dolor, y menos frecuentemente, limitaciones en el 
+                        movimiento de apertura de la boca, que pueden requerir tratamiento ulterior, y que la anestesia puede 
+                        provocar la baja de la presión arterial que, en casos menos frecuentes, pueden provocar un síncope o 
+                        fibrilación ventricular, que deben tratarse posteriormente, e, incluso, excepcionalmente, la muerte.</p>
+                    <p>Comprendo que, aunque de mis antecedentes personales no se deducen posibles alergias o 
+                        hipersensibilidad al agente anestésico, la anestesia puede provocar urticarias, dermatitis, asma, edema 
+                        angioneurótico (asfixia), que en casos extremos puede requerir tratamiento urgente.</p>
+                </li>
+                <li>
+                    La intervención consiste en la eliminación de la placa y cálculo con curetas o ultrasonido, y a las 
+pocas semanas, de ser necesario, la cirugía de las encías a colgajo para eliminar las bolsas infecciosas, 
+aumentar el nivel de la encía y/o tratar los defectos óseos.
+                </li>
+                <li>
+                    Aunque se me han practicado los medios diagnósticos que se han estimado convenientes, 
+comprendo que pueden producirse procesos edematosos, hinchazón, dolor o laceraciones en la mucosa 
+del labio o mejilla, o en la lengua, que no dependen de la técnica empleada ni de su correcta realización, 
+sino que son imprevisibles, aunque relativamente frecuentes, en cuyo caso el dentista tomará las 
+medidas pertinentes y continuará el tratamiento.
+                <p>Sé que es frecuente que después del tratamiento advierta un aumento de la sensibilidad dentaria u 
+                    movilidad de los dientes que normalmente desaparecerán bien espontáneamente o por un tratamiento 
+                    posterior</p>
+                    <p>También sé que va a producirse un cierto alargamiento de los dientes, más perceptible al sonreír, como 
+                        consecuencia segura de haberse eliminado el tejido enfermo e inflamado Igualmente comprendo que el 
+                        tratamiento puede extenderse incluso hasta un año o más, en cuyo transcurso deberé acudir a la consulta 
+                        periódicamente, y cuidar especialmente la higiene dental mediante las técnicas que me ha indicado.</p>
+                <p>Me ha explicado también pormenorizadamente la importancia del cuidado dental y el mantenimiento con 
+                    visitas periódicas de sesiones de profilaxis e higiene dental, lo que debe realizarse a lo largo de toda la 
+                    vida.</p>
+                <p>También comprendo que el objetivo perseguido NO SE PUEDA lograr, total o parcialmente, con 
+                    independencia de la técnica empleada y de su correcta realización, y de que, sin la esmerada contribución 
+                    de mi parte en el control de placa bacteriana, mediante la higiene frecuente, los objetivos perseguidos no 
+                    se puedan cumplir.</p>
+                <p>También sé que se puede producir cierto alargamiento de los dientes, más perceptible al sonreír, como 
+                    consecuencia de haber eliminado el tejido inflamado.</p>
+                   
+                </li>
+                <li>
+                    El Dentista me ha explicado que todo acto quirúrgico lleva implícitas una serie de complicaciones 
+                    comunes y potencialmente serias que podrían requerir tratamientos complementarios tanto médicos 
+                    como quirúrgicos.
+                </li>
+            </ol>
+            <p>
+                He comprendido lo que se me ha explicado de forma clara, con un lenguaje sencillo, habiendo resuelto 
+todas las dudas que se me han planteado, y la información complementaria que le he solicitado.
+            </p>
+            <p>Me queda claro que en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar 
+                este consentimiento. Estoy satisfecho con la información recibida y comprendido el alcance y riesgos de este tratamiento, y 
+                en por ello, <strong>DOY MI CONSENTIMIENDO</strong>, para que se me practique el tratamiento de periodoncia.</p>
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>El Odontólogo / Estomatólogo</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

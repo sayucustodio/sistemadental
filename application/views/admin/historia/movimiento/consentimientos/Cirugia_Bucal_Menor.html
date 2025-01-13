@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento Informado</title>
+    <style>
+        /* Estilo general del documento */
+        .documento {
+            text-align: justify;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Título principal */
+        .titulo {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la declaración */
+        .declaracion {
+            margin-bottom: 20px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            margin-bottom: 30px;
+        }
+
+        .fechas {
+            text-align: right;
+
+        }
+
+        /* Contenedor de firmas */
+        .firmas {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Firma del paciente o representante */
+        .firma-paciente {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Firma del dentista */
+        .firma-dentista {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Información del COP del dentista */
+        .firma-dentista p {
+            margin: 0;
+        }
+
+        /* Contenedor de firmas */
+    </style>
+</head>
+
+<body>
+    <div class="documento">
+        <h1 class="titulo">CONSENTIMIENTO INFORMADO PARA LA CIRUGÍA ORAL MENOR</h1>
+
+        <p class="declaracion">
+            Yo <strong>{{nombre_completo}}</strong>, identificado con DNI No. <strong>{{dni}}</strong>, mayor de edad,
+            con domicilio en <strong>{{direccion}}</strong>
+            {% if paciente_nombre %}
+            , en calidad de representante legal de <strong>{{paciente_nombre}}</strong>
+            {% endif %}
+            , DECLARO:
+        </p>
+
+        <div class="contenido">
+            <p>
+                Que el Cirujano Dentista <strong>{{medico_nombre}}</strong>, me ha explicado que el propósito de la
+                intervención de cirugía oral menor es para
+                resolver alguno de los siguientes problemas de la cavidad oral <strong> (borrar los que no
+                    correspondan):extracción de piezas dentarias o restos apicales incluidos,
+                    fenestración o tracción de dientes retenidos, plastia de frenillos labiales,
+                    extirpación de quistes maxilares y pequeños tumores de los mismos o del resto de
+                    la cavidad bucaly cirugía preprotésica fundamentalmente.</strong>
+            </p>
+            <p>Para llevar a cabo el procedimiento se aplicará anestesia, de cuyos posibles riesgos
+                también he sido informado/a, es posible que los fármacos utilizados puedan producir
+                determinadas alteraciones del nivel de conciencia por lo que se me ha informado que no
+                podré realizar determinadas actividades inmediatamente, tales cómo conducir un
+                vehículo.</p>
+            <p>Igualmente se me ha informado de que existen ciertos riesgos potenciales y
+                complicaciones, algunas de ellas inevitables, concretamente:</p>
+            <ol>
+                <li>
+                    Alergia al anestésico u otro medicamento utilizado, antes o después de la cirugía.
+                </li>
+                <li>
+                    Hematoma y edema de la región.
+
+                </li>
+                <li>
+                    Hemorragia postoperatoria.
+                </li>
+                <li>
+                    Dehiscencia de la sutura.
+                </li>
+                <li>
+                    Daño de dientes adyacentes.
+                </li>
+                <li>Hipoestesia o anestesia del nervio dentario inferior, temporal o definitiva</li>
+                <li>Hipoestesia o anestesia del nervio lingual, temporal o definitiva.</li>
+                <li>Hipoestesia o anestesia del nervio infraorbitario, temporal o definitiva</li>
+                <li>Infección postoperatoria</li>
+                <li>Osteítis</li>
+                <li>Sinusitis.</li>
+                <li>Comunicación buconasal y/o bucosinual.</li>
+                <li>Fracturas óseas</li>
+                <li>Rotura de instrumentos.</li>
+
+            </ol>
+            <p>Tras la información recibida, he comprendido la naturaleza y propósitos del tratamiento
+                de cirugía que se me va a practicar. He comprendido lo que se me ha explicado de forma clara, con un
+                lenguaje sencillo,
+                habiendo resuelto todas las dudas que se me han planteado, y la información
+                complementaria que le he solicitado. Me queda claro que en cualquier momento y sin necesidad de dar
+                ninguna explicación,
+                puedo revocar este consentimiento. Estoy satisfecho con la información recibida y comprendido el alcance
+                y riesgos de este
+                tratamiento, y en por ello, <strong>DOY MI CONSENTIMIENTO</strong>, para que se me practique el
+                tratamiento de cirugía.</p>
+
+        </div>
+        <div class="fechas">
+            <p>En Nuevo Chimbote, a <strong>{{fecha_actual}}</strong></p>
+        </div>
+
+        <div class="firmas">
+
+            <div class="firma-paciente">
+                <p>El Paciente o Representante Legal</p>
+            </div>
+            <div class="firma-dentista">
+                <p>Cirujano-Dentista</p>
+                <p>COP: <strong>{{medico_colegiatura}}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

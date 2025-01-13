@@ -6,6 +6,7 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header box-form-header">
+
             <h3 class="box-title">Listado de Pagos</h3>
 
 
@@ -55,6 +56,7 @@
 
                 </div>
 
+                
             </form>
           </div>
         </div>
